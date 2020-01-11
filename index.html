@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        SQL Challenge - Anu Srivastava
+    </title>
+</head>
+
+<body>
+    <h1 style="color:dodgerblue">SQL Homework - Employee Database: A Mystery in Two Parts</h1 style="color:dodgerblue">
+    <img src="EmployeeSQL/Resources/sql.png" width=300 />
+    <BR /><BR />
+    <h2 style="color:dodgerblue"># Background</h2>
+    <p style="padding-left: 50px;">
+        It is a beautiful spring day, and it is two weeks since you have been hired as a new data engineer at Pewlett
+        Hackard. Your first major task is a research project on employees of the corporation from the 1980s and 1990s.
+        All that remain of the database of employees from that period are six CSV files.
+        <BR /><BR />
+        In this assignment, you will design the tables to hold data in the CSVs, import the CSVs into a SQL database,
+        and answer questions about the data. In other words, you will perform:
+        <BR /><BR />
+        <ol style="padding-left: 100px;">
+            <li>
+                Data Modeling
+            </li>
+            <li>
+                Data Engineering
+            </li>
+            <li>
+                Data Analysis
+            </li>
+        </ol>
+    </p>
+    <BR /><BR />
+    <h2 style="color:dodgerblue"># Instructions</h2>
+
+    <h3 style="color:dodgerblue">Data Modeling</h3>
+    <p style="padding-left: 50px;">
+        Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like <a
+            href="http://www.quickdatabasediagrams.com"
+            style="color:dodgerblue">http://www.quickdatabasediagrams.com</a>.
+    </p>
+    <h3 style="color:dodgerblue">Data Engineering</h3>
+    <p style="padding-left: 50px;">
+        * Use the information you have to create a table schema for each of the six CSV files. Remember to specify data
+        types, primary keys, foreign keys, and other constraints.
+        * Import each CSV file into the corresponding SQL table.
+    </p>
+    <h3 style="color:dodgerblue">Data Analysis</h3>
+    <p style="padding-left: 50px;">
+        Once you have a complete database, do the following:
+        <BR /><BR />
+        <ol style="padding-left: 100px;">
+            <li>
+                List the following details of each employee: employee number, last name, first name, gender, and salary.
+            </li>
+            <li>
+                List employees who were hired in 1986.
+            </li>
+            <li>
+                List the manager of each department with the following information: department number, department name,
+                the manager's employee number, last name, first name, and start and end employment dates.
+            </li>
+            <li>
+                List the department of each employee with the following information: employee number, last name, first
+                name, and department name.
+            </li>
+            <li>
+                List all employees whose first name is "Hercules" and last names begin with "B."
+            </li>
+            <li>
+                List all employees in the Sales department, including their employee number, last name, first name, and
+                department name.
+            </li>
+            <li>
+                List all employees in the Sales and Development departments, including their employee number, last name,
+                first name, and department name.
+            </li>
+            <li>
+                In descending order, list the frequency count of employee last names, i.e., how many employees share
+                each last name.
+            </li>
+        </ol>
+    </p>
+    <BR /><BR />
+    <h2 style="color:dodgerblue"># Bonus</h2>
+    <p style="padding-left: 50px;">
+        As you examine the data, you are overcome with a creeping suspicion that the dataset is fake. You surmise that
+        your boss handed you spurious data in order to test the data engineering skills of a new employee. To confirm
+        your hunch, you decide to take the following steps to generate a visualization of the data, with which you will
+        confront your boss:
+        <BR /><BR />
+        1. Import the SQL database into Pandas. (Yes, you could read the CSVs directly in Pandas, but you are, after
+        all, trying to prove your technical mettle.) This step may require some research. Feel free to use the code
+        below to get started. Be sure to make any necessary modifications for your username, password, host, port, and
+        database name:
+        <BR /><BR />
+        <font style="color:forestgreen">```sql<BR />
+            from sqlalchemy import create_engine<BR />
+            engine = create_engine('postgresql://localhost:5432/<your_db_name>')<BR />
+                connection = engine.connect()<BR />
+                ```</font>
+        <BR /><BR />
+        * Consult <a
+        href="https://docs.sqlalchemy.org/en/latest/core/engines.html#postgresql"
+        style="color:dodgerblue">[SQLAlchemy documentation]</a> for more information.
+        <BR /><BR />
+
+        * If using a password, do not upload your password to your GitHub repository. See
+        [https://www.youtube.com/watch?v=2uaTPmNvH0I](https://www.youtube.com/watch?v=2uaTPmNvH0I) and
+        [https://martin-thoma.com/configuration-files-in-python/](https://martin-thoma.com/configuration-files-in-python/)
+        for more information.
+        <BR /><BR />
+
+        2. Create a histogram to visualize the most common salary ranges for employees.
+        <BR /><BR />
+
+        3. Create a bar chart of average salary by title.
+        <BR /><BR />
+    </p>
+
+</body>
+
+</html>
